@@ -1,0 +1,16 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "Adaptive site from Academy templates",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruslan Khabibullin",
+  "license": "ISC",
+  "browserlist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ]
+}
