@@ -1,22 +1,24 @@
 .main-nav {
+  box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .main-nav__top {
-  height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  height: 80px;
 
   padding: 0 30px;
+
   border-bottom: 1px solid $light-grey;
 }
 
 .page-header__logo {
   height: 40px;
   margin: 0 auto;
+
   text-align: center;
 
   &img {
@@ -32,12 +34,13 @@
   width: 20px;
   height: 20px;
 
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
   margin: 0;
   padding: 0;
+
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -62,6 +65,7 @@
 
     width: 20px;
     height: 2px;
+
     background-color: $black;
 
     content: "";
@@ -76,50 +80,46 @@
   }
 }
 
-.main-nav__list {
-  list-style: none;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-
-  a {
-    display: block;
-    color: $black;
-    padding: 27px 30px 27px 75px;
-    font-size: 17px;
-    line-height: 24px;
-    text-decoration: none;
-    border-bottom: 1px solid $light-grey;
-    box-sizing: border-box;
-  }
-}
-
-.main-nav__list--2 {
-  a {
-    position: relative;
-  }
-
-  svg {
-    position: absolute;
-    top: 31px;
-    left: 32px;
-
-    path {
-      fill-opacity: 0.2;
-    }
-  }
-}
-
-.main-nav__list--3,
-.main-nav__remark {
-  display: none;
-}
-
-@media (max-width: $tablet-width) {
+@media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__bottom {
     display: none;
   }
   .main-nav--nojs .main-nav__bottom {
     display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    position: relative;
+
+    width: 768px;
+  }
+
+  .main-nav__top {
+    position: absolute;
+    top: 0;
+
+    left: 50px;
+
+    width: 300px;
+    height: 90px;
+    padding: 0;
+
+    border: none;
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  .page-header__logo {
+    margin: 0;
+  }
+
+  .main-nav__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
