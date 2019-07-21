@@ -46,14 +46,9 @@
     "stylelint-order": "^3.0.1",
     "stylelint-scss": "^3.9.1"
   },
-  "browserlist": [
+  "browserslist": [
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run stylelint"
-    }
-  }
+  ]
 }

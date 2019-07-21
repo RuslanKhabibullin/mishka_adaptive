@@ -20,11 +20,11 @@ var uglify = require('gulp-uglify')
 var stylelint = require('gulp-stylelint')
 var eslint = require('gulp-eslint')
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
   return del('build')
 })
 
-gulp.task('eslint', function () {
+gulp.task('eslint', function() {
   var needToFix = process.argv.indexOf('--fix') > -1
 
   return gulp
@@ -35,7 +35,7 @@ gulp.task('eslint', function () {
     .pipe(gulp.dest('js'))
 })
 
-gulp.task('scss-lint', function () {
+gulp.task('scss-lint', function() {
   var needToFix = process.argv.indexOf('--fix') > -1
 
   return gulp
@@ -44,13 +44,13 @@ gulp.task('scss-lint', function () {
       stylelint({
         failAfterError: true,
         fix: needToFix,
-        reporters: [{ formatter: 'string', console: true }]
+        reporters: [{ formatter: 'string', console: true }],
       })
     )
     .pipe(gulp.dest('sass'))
 })
 
-gulp.task('style', function () {
+gulp.task('style', function() {
   return gulp
     .src('sass/style.scss')
     .pipe(plumber())
@@ -64,27 +64,27 @@ gulp.task('style', function () {
     .pipe(server.stream())
 })
 
-gulp.task('html', function () {
+gulp.task('html', function() {
   return gulp
     .src('*.html')
     .pipe(posthtml([include()]))
     .pipe(gulp.dest('build'))
 })
 
-gulp.task('images', function () {
+gulp.task('images', function() {
   return gulp
     .src('images/**/*.{png,jpg,svg}')
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.jpegtran({ prograssive: true }),
-        imagemin.svgo()
+        imagemin.svgo(),
       ])
     )
     .pipe(gulp.dest('images'))
 })
 
-gulp.task('scripts', function () {
+gulp.task('scripts', function() {
   return gulp
     .src('js/main.js')
     .pipe(plumber())
@@ -96,27 +96,27 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('build/js'))
 })
 
-gulp.task('copy', ['html', 'scripts', 'style'], function () {
+gulp.task('copy', ['html', 'scripts', 'style'], function() {
   return gulp
     .src(['fonts/**/*.{woff,woff2}', 'images/**'], {
-      base: '.'
+      base: '.',
     })
     .pipe(gulp.dest('build'))
 })
 
-gulp.task('js-watch', ['scripts'], function (done) {
+gulp.task('js-watch', ['scripts'], function(done) {
   server.reload()
   done()
 })
 
-gulp.task('serve', function () {
+gulp.task('serve', function() {
   server.init({
     server: './build',
     notify: false,
     open: true,
     cors: true,
     port: 3502,
-    ui: false
+    ui: false,
   })
 
   gulp.watch('sass/**/*.scss', ['style'])
@@ -129,6 +129,6 @@ gulp.task('serve', function () {
   })
 })
 
-gulp.task('build', function (done) {
+gulp.task('build', function(done) {
   run('clean', 'images', 'copy', done)
 })
