@@ -399,6 +399,15 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between; } }
 
+@media (min-width: 1150px) {
+  .main-nav {
+    width: 1150px; }
+  .main-nav__top {
+    left: calc(50% - 76px);
+    width: 152px; }
+  .page-header__logo {
+    height: 74px; } }
+
 .nav-list {
   margin: 0;
   padding: 0;
@@ -431,7 +440,11 @@ template {
   top: calc(50% - 8px);
   left: 30px; }
   .nav-list--2 svg path {
-    fill-opacity: 0.2; }
+    fill-opacity: .2; }
+
+.nav-list--2 a:hover svg path {
+  fill: #63d1bb;
+  fill-opacity: initial; }
 
 .nav-list--3,
 .nav-remark {
@@ -448,15 +461,19 @@ template {
             align-items: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-  .nav-list--1 {
+  .nav-list--1,
+  .nav-list--3 {
     width: 480px;
+    height: 60px;
     padding-left: 50px; }
-    .nav-list--1 .nav-list__item {
+    .nav-list--1 .nav-list__item,
+    .nav-list--3 .nav-list__item {
       width: 166px;
-      height: 60px;
+      height: 100%;
       padding: 0;
       border: none; }
-    .nav-list--1 a {
+    .nav-list--1 a,
+    .nav-list--3 a {
       font-size: 15px; }
   .nav-list--2 {
     -webkit-box-ordinal-group: 0;
@@ -492,6 +509,38 @@ template {
     padding-right: 50px;
     font-weight: normal;
     font-size: 15px; } }
+
+@media (min-width: 1150px) {
+  .nav-list--1 {
+    width: 495px;
+    height: 90px;
+    border-bottom: 1px solid #ececec; }
+    .nav-list--1 .nav-list__item {
+      width: 185px; }
+      .nav-list--1 .nav-list__item:first-child {
+        border-right: 1px solid #ececec; }
+      .nav-list--1 .nav-list__item:last-child {
+        width: 265px;
+        padding-left: 37px; }
+    .nav-list--1 a {
+      font-size: 17px; }
+  .nav-list--2 {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 655px;
+    height: 90px;
+    padding: 0 50px 0 250px;
+    border-bottom: 1px solid #ececec; }
+  .nav-list--3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .nav-list--3 .nav-list__item {
+      width: 185px; }
+      .nav-list--3 .nav-list__item:last-child {
+        width: 265px;
+        padding-left: 37px; } }
 
 @font-face {
   font-weight: normal;
@@ -544,3 +593,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%); }
+
+a[href]:hover {
+  opacity: .6; }

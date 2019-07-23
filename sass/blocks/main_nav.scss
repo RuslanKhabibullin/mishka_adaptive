@@ -123,3 +123,19 @@
     justify-content: space-between;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 1150px;
+  }
+
+  .main-nav__top {
+    left: calc(50% - 76px);
+
+    width: 152px;
+  }
+
+  .page-header__logo {
+    height: 74px;
+  }
+}
