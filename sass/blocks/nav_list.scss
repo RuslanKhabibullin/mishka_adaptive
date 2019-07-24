@@ -33,15 +33,12 @@
     position: absolute;
     top: calc(50% - 8px);
     left: 30px;
-
-    path {
-      fill-opacity: .2;
-    }
+    fill-opacity: .2;
   }
 
-  a:hover svg path{
+  a:hover svg {
     fill: $light-green;
-    fill-opacity: initial;
+    fill-opacity: 1;
   }
 }
 

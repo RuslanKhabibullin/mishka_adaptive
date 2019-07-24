@@ -1,0 +1,67 @@
+.promo {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $promo-background;
+}
+
+.promo__title {
+  padding: 76px 30px 0;
+  text-align: center;
+  box-sizing: border-box;
+  height: 282px;
+  background-image: url('../images/promo-mobile.jpg');
+
+  .title__mobile {
+    font-size: 27px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .title__original {
+    display: none;
+  }
+}
+
+.promo__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+  list-style: none;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.promo__item {
+  width: 320px;
+  padding: 30px 160px 0 30px;
+  height: 102px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:hover {
+    height: 107px;
+    margin-top: -5px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 20px;
+    right: 37px;
+    fill: rgba(#149080, 0.5);
+  }
+
+  &--interier {
+    background-color: $light-green;
+  }
+
+  &--toys {
+    background-color: $dark-green;
+  }
+}

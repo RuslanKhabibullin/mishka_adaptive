@@ -19,6 +19,10 @@ var babel = require('gulp-babel')
 var uglify = require('gulp-uglify')
 var stylelint = require('gulp-stylelint')
 var eslint = require('gulp-eslint')
+var svgstore = require('gulp-svgstore')
+var svgmin = require('gulp-svgmin')
+var cheerio = require('gulp-cheerio')
+var replace = require('gulp-replace')
 
 gulp.task('clean', function() {
   return del('build')
@@ -73,7 +77,7 @@ gulp.task('html', function() {
 
 gulp.task('images', function() {
   return gulp
-    .src('images/**/*.{png,jpg,svg}')
+    .src(['images/**/*.{png,jpg,svg}', '!images/to-sprite/**'])
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
@@ -81,7 +85,39 @@ gulp.task('images', function() {
         imagemin.svgo(),
       ])
     )
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest('build/images'))
+})
+
+gulp.task('svg-sprite', function() {
+  return gulp
+    .src('images/to-sprite/*.svg')
+    .pipe(
+      svgmin(function() {
+        return {
+          plugins: [
+            {
+              cleanupIDs: {
+                minify: true,
+              },
+            },
+          ],
+        }
+      })
+    )
+    .pipe(
+      cheerio({
+        run: function($, _file) {
+          $('[fill]').removeAttr('fill')
+          $('[stroke]').removeAttr('stroke')
+          $('[style]').removeAttr('style')
+        },
+        parserOptions: { xmlMode: true },
+      })
+    )
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename('sprite-svg.svg'))
+    .pipe(gulp.dest('build/images/'))
 })
 
 gulp.task('scripts', function() {
@@ -98,7 +134,7 @@ gulp.task('scripts', function() {
 
 gulp.task('copy', ['html', 'scripts', 'style'], function() {
   return gulp
-    .src(['fonts/**/*.{woff,woff2}', 'images/**'], {
+    .src('fonts/**/*.{woff,woff2}', {
       base: '.',
     })
     .pipe(gulp.dest('build'))
@@ -130,5 +166,5 @@ gulp.task('serve', function() {
 })
 
 gulp.task('build', function(done) {
-  run('clean', 'images', 'copy', done)
+  run('clean', 'svg-sprite', 'images', 'copy', done)
 })
