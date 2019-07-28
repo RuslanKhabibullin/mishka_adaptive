@@ -67,6 +67,7 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
 }
 
-a[href]:hover {
-  opacity: .6;
+a[href],
+button {
+  cursor: pointer;
 }
