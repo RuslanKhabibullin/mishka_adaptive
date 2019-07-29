@@ -1,8 +1,8 @@
-.reviews {
+.reviews__wrapper {
   @include zigzag-line-divider;
 }
 
-.reviews__wrapper {
+.reviews {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -35,6 +35,8 @@
 .reviews__text {
   margin: 0;
 
+  color: $light-black;
+
   font-size: 15px;
   line-height: 30px;
 }
@@ -48,10 +50,14 @@
 
     font-weight: bold;
   }
+
+  &__instagram {
+    color: $light-black;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .reviews__wrapper {
+  .reviews {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -108,7 +114,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .reviews {
+  .reviews__wrapper {
     box-sizing: border-box;
     width: 1150px;
     margin: 0 auto;
@@ -119,7 +125,7 @@
     }
   }
 
-  .reviews__wrapper {
+  .reviews {
     @include zigzag-line-divider;
 
     width: 100%;

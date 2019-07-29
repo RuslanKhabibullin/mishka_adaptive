@@ -1,8 +1,8 @@
-.promo {
+.promo__wrapper {
   background-color: $promo-background;
 }
 
-.promo__wrapper {
+.promo {
   width: 320px;
   margin: 0 auto;
 }
@@ -76,13 +76,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .promo {
+  .promo__wrapper {
     position: relative;
 
     margin-top: -60px;
   }
 
-  .promo::after {
+  .promo__wrapper::after {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -97,7 +97,7 @@
     content: "";
   }
 
-  .promo__wrapper {
+  .promo {
     width: 768px;
   }
 
@@ -137,7 +137,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo__wrapper {
+  .promo {
     width: 1150px;
   }
 

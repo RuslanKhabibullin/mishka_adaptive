@@ -61,8 +61,8 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="promo">
-        <div class="promo__wrapper">
+      <section class="promo__wrapper">
+        <div class="promo">
           <div class="promo__title">
             <h1 class="title">Милые штуки ручной<br> работы для дома</h1>
           </div>
@@ -163,8 +163,8 @@
           </div>
         </ul>
       </section>
-      <section class="reviews">
-        <div class="reviews__wrapper">
+      <section class="reviews__wrapper">
+        <div class="reviews">
           <h2 class="reviews__title">Отзывы</h2>
           <a class="button reviews__write" href="#">написать</a>
           <div class="reviews__list slider__list">
@@ -213,9 +213,8 @@
             </td>
           </tr>
         </table>
-        <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.320858716211177!3d59.938719169054096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1563629694332!5m2!1sru!2sru" width="320" height="458" frameborder="0" style="border:0" allowfullscreen>
-          </iframe>
+        <div class="map__wrapper">
+          <div class="contacts__map" id="map"></div>
         </div>
         <a href="#" class="button contacts__button">Напишите нам</button>
       </section>
@@ -238,6 +237,7 @@
         <a href="#" class="copyright__link">HTML Academy</a>
       </div>
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlSL6dVJVeWBCRxzRne3s5BQz7VM99DBw&callback=initMap"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
