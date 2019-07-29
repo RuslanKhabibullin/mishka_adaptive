@@ -301,6 +301,9 @@ template {
 [hidden] {
   display: none; }
 
+.slider__item:not(.slider__item--active) {
+  display: none; }
+
 .slider__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1037,6 +1040,9 @@ template {
   padding: 35px 0 37px; }
 
 .reviews__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 378px;
   margin: 0 0 35px; }
 
 .reviews__text {
@@ -1093,6 +1099,7 @@ template {
     padding: 40px 0 0; }
   .reviews__item {
     position: relative;
+    min-height: 183px;
     margin: 0;
     padding: 0 0 63px; }
   .reviews__text {

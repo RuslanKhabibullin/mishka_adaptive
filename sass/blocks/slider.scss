@@ -1,3 +1,7 @@
+.slider__item:not(.slider__item--active) {
+  display: none;
+}
+
 .slider__buttons {
   display: flex;
   justify-content: space-between;
