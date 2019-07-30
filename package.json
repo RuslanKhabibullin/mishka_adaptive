@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve",
-    "stylelint": "gulp scss-lint && gulp eslint"
+    "stylelint": "gulp scss-lint && gulp eslint",
+    "postinstall": "gulp build"
   },
   "author": "Ruslan Khabibullin",
   "license": "ISC",
@@ -59,5 +60,8 @@
     "hooks": {
       "pre-commit": "npm run stylelint"
     }
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
   }
 }
