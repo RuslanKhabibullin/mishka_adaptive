@@ -41,7 +41,6 @@
     padding: 0 0 5px;
 
     color: $light-black;
-
     font-size: 15px;
     line-height: 30px;
     text-decoration: none;
@@ -78,7 +77,6 @@
 
     &::after {
       position: absolute;
-
       top: -20px;
       right: 0;
 
@@ -127,7 +125,6 @@
 
     display: flex;
     flex-direction: column;
-
     width: 1150px;
     padding: 70px 50px 100px;
   }

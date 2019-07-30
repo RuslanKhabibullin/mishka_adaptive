@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Вязаные товары "Мишка"</title>
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/opensans-bold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlSL6dVJVeWBCRxzRne3s5BQz7VM99DBw&callback=initMap" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -14,7 +18,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="images/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-              <img src="images/logo-mobile.svg">
+              <img src="images/logo-mobile.svg" alt="Лого">
             </picture>
           </a>
           <button class="main-nav__toggle" type="button">
@@ -111,7 +115,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="images/week-item-desktop.jpg">
               <source media="(min-width: 768px)" srcset="images/week-item-tablet.jpg">
-              <img width="260px" height="314px" src="images/week-item-mobile.jpg">
+              <img width="260px" height="314px" src="images/week-item-mobile.jpg" alt="Товар недели">
             </picture>
             <b class="week-item__price">Цена: 990 руб.</b>
             <button class="button">Заказать</button>
@@ -120,8 +124,8 @@
       </section>
       <section class="features">
         <h2 class="features__title">Коротко о нас:</h2>
-        <ul class="features__items">
-          <div class="block block--1">
+        <div class="features__items__wrapper">
+          <ul class="features__items features__items--1">
             <li class="features__item features__item--ecology">
               <svg width="32" height="37">
                 <use xlink:href="/images/sprite-svg.svg#icon-feature-flower"></use>
@@ -140,8 +144,8 @@
               </svg>
               Увеличивает лайки<br>на фотографиях
             </li>
-          </div>
-          <div class="block block--2">
+          </ul>
+          <ul class="features__items features__items--2">
             <li class="features__item features__item--love">
               <svg width="35" height="34">
                 <use xlink:href="/images/sprite-svg.svg#icon-feature-ball"></use>
@@ -160,8 +164,8 @@
               </svg>
               Поставляется в<br>подарочной упаковке
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </section>
       <section class="reviews__wrapper">
         <div class="reviews">
@@ -220,25 +224,46 @@
       </section>
     </main>
     <footer>
-      <a class="footer__logo" href="#"></a>
-      <ul class="footer__social social__list">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--instagram">Мы в Инстаграмме</a>
-        </li>
-        <li>
-          <a href="#" class="social__link social__link--facebook">Мы в Facebook</a>
-        </li>
-        <li>
-          <a href="#" class="social__link social__link--twitter">Мы в Twitter</a>
-        </li>
-      </ul>
-      <div class="footer__copyright">
-        <b class="copyright__text">Разработано</b>
-        <a href="#" class="copyright__link">HTML Academy</a>
+      <div class="footer__content">
+        <a class="footer__logo" href="index.html">
+          <svg width="51" height="34">
+            <use xlink:href="/images/sprite-svg.svg#logo-footer"></use>
+          </svg>
+        </a>
+        <ul class="footer__social social__list">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram">
+              <svg width="22" height="22">
+                <use xlink:href="/images/sprite-svg.svg#social-instagram"></use>
+              </svg>
+              Мы в Инстаграмме
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social__link social__link--facebook">
+              <svg width="22" height="22">
+                <use xlink:href="/images/sprite-svg.svg#social-facebook"></use>
+              </svg>
+              Мы в Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social__link social__link--twitter">
+              <svg width="22" height="22">
+                <use xlink:href="/images/sprite-svg.svg#social-twitter"></use>
+              </svg>
+              Мы в Twitter
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="copyright__link">
+          Разработано
+          <svg width="27" height="34">
+            <use xlink:href="/images/sprite-svg.svg#icon-hat"></use>
+          </svg>
+        </a>
       </div>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlSL6dVJVeWBCRxzRne3s5BQz7VM99DBw&callback=initMap"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>
  

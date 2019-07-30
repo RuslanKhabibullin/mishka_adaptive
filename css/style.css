@@ -936,8 +936,11 @@ template {
   font-size: 25px;
   line-height: 30px; }
 
+.features__items__wrapper {
+  margin: 25px 0 0 0; }
+
 .features__items {
-  margin: 25px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none; }
 
@@ -963,13 +966,14 @@ template {
   .features__title {
     font-size: 43px;
     line-height: 50px; }
-  .features__items {
+  .features__items__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-    margin: 45px 0 0; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 45px 0 0 0; }
   .features__item {
     width: 330px;
     margin: 0 0 55px;
@@ -1313,17 +1317,126 @@ template {
     width: 260px;
     margin: 0 643px 0 175px; } }
 
+footer {
+  background-color: #f1f1f1; }
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px 0 22px; }
+
+.footer__logo {
+  display: none; }
+
+.footer__social {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 260px;
+  padding: 0 62px 10px 57px;
+  font-size: 0;
+  list-style: none; }
+  .footer__social .social__link:hover svg {
+    fill: #56c3b2; }
+  .footer__social::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: ""; }
+
+.copyright__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 181px;
+  height: 34px;
+  margin: 22px 0 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 18px;
+  text-decoration: none; }
+  .copyright__link svg {
+    fill: #63d1bb; }
+
+.copyright__link:hover svg {
+  fill: #56c3b2; }
+
+@media (min-width: 768px) {
+  .footer__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 668px;
+    padding: 50px 0 55px; }
+  .footer__logo {
+    display: block; }
+    .footer__logo svg {
+      width: 102px;
+      height: 38px; }
+  .footer__logo:hover svg {
+    fill: #63d1bb; }
+  .footer__social {
+    width: 380px;
+    height: 30px;
+    padding: 0 82px 0 157px; }
+    .footer__social::after {
+      display: none; }
+  .copyright__link {
+    margin: 0; } }
+
+@media (min-width: 1150px) {
+  .footer__content {
+    width: 1150px;
+    padding: 50px 50px 55px; }
+  .footer__social {
+    width: 763px;
+    padding: 0 274px 0 347px; } }
+
 @font-face {
   font-weight: normal;
   font-family: "Open Sans";
   font-style: normal;
-  src: url("../fonts/opensans.woff") format("woff2"), url("../fonts/opensans.woff") format("woff2"); }
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff2") format("woff2"); }
 
 @font-face {
   font-weight: bold;
   font-family: "Open Sans";
   font-style: normal;
-  src: url("../fonts/opensans-bold.woff") format("woff2"), url("../fonts/opensans-bold.woff") format("woff2"); }
+  src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff2") format("woff2"); }
 
 body {
   min-width: 320px;
@@ -1332,6 +1445,7 @@ body {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
+  font-display: swap;
   line-height: 30px; }
 
 img {
