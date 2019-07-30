@@ -1,5 +1,5 @@
 # Mishka Adaptive
-Adaptive mishkpa markup
+Adaptive mishka markup
 
 - `npm i` - install dependencies
 - `npm start` - for development purposes
