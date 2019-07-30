@@ -1,0 +1,36 @@
+.modal {
+  &--closed {
+    display: none;
+  }
+
+  &::after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 98;
+
+    background-color: $white;
+    opacity: 0.9;
+
+    content: "";
+  }
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 150px;
+  left: calc(50% - 160px);
+  z-index: 99;
+
+  background-color: $white;
+  border: 1px solid $modal-border;
+  box-shadow: 0 10px 10px -5px rgba($color: $black, $alpha: .5);
+}
+
+@media (min-width: $tablet-width) {
+  .modal__dialog {
+    left: calc(50% - 284px);
+  }
+}

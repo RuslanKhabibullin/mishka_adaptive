@@ -47,6 +47,10 @@
 
     border-bottom: 1px solid $light-green;
   }
+
+  a:hover {
+    color: $light-green;
+  }
 }
 
 .contacts__map {
