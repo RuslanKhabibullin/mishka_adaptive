@@ -1,0 +1,24 @@
+<div id="order_modal" class="modal modal--closed">
+  <section class="order modal__dialog">
+    <h2 class="order__title">Добавить в корзину</h2>
+    <form class="order__form">
+      <span>Выберите размер:</span>
+      <ul class="order__sizes">
+        <li class="size__item">
+          <input name="size" type="radio" class="visually-hidden" value="S" id="s_size_radio_btn" checked>
+          <label for="s_size_radio_btn" class="order-radio">S</label>
+        </li>
+        <li class="size__item">
+          <input name="size" type="radio" class="visually-hidden" value="M" id="m_size_radio_btn">
+          <label for="m_size_radio_btn" class="order-radio">M</label>
+        </li>
+        <li class="size__item">
+          <input name="size" type="radio" class="visually-hidden" value="L" id="l_size_radio_btn">
+          <label for="l_size_radio_btn" class="order-radio">L</label>
+        </li>
+      </ul>
+      <button type="submit" class="button button--huge order__button order__button--add">добавить</button>
+      <button class="button order__button modal--close">закрыть</button>
+    </form>
+  </section>
+</div>

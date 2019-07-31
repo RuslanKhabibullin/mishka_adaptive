@@ -1,0 +1,40 @@
+.content-promo {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 76px 0 80px;
+
+  text-align: center;
+
+  background-color: $lightest-grey;
+}
+
+.content__title {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .content-promo {
+    @include zigzag-header;
+
+    margin-top: -60px;
+    padding: 100px 0 85px;
+  }
+
+  .content__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .content-promo {
+    padding: 90px 0 85px;
+  }
+
+  .content__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

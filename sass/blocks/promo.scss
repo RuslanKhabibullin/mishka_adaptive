@@ -77,24 +77,9 @@
 
 @media (min-width: $tablet-width) {
   .promo__wrapper {
-    position: relative;
+    @include zigzag-header;
 
     margin-top: -60px;
-  }
-
-  .promo__wrapper::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-  
-    width: 100%;
-    height: 12px;
-
-    background-image: url('../images/zigzag.svg');
-    background-repeat: repeat-x;
-  
-    content: "";
   }
 
   .promo {

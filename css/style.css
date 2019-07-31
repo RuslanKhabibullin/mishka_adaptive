@@ -673,16 +673,16 @@ template {
   .promo__wrapper {
     position: relative;
     margin-top: -60px; }
-  .promo__wrapper::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    width: 100%;
-    height: 12px;
-    background-image: url("../images/zigzag.svg");
-    background-repeat: repeat-x;
-    content: ""; }
+    .promo__wrapper::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      width: 100%;
+      height: 12px;
+      background-image: url("../images/zigzag.svg");
+      background-repeat: repeat-x;
+      content: ""; }
   .promo {
     width: 768px; }
   .promo__title {
@@ -1529,6 +1529,45 @@ footer {
 @media (min-width: 768px) {
   .modal__dialog {
     left: calc(50% - 284px); } }
+
+.content-promo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 76px 0 80px;
+  text-align: center;
+  background-color: #f1f1f1; }
+
+.content__title {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px; }
+
+@media (min-width: 768px) {
+  .content-promo {
+    position: relative;
+    margin-top: -60px;
+    padding: 100px 0 85px; }
+    .content-promo::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      width: 100%;
+      height: 12px;
+      background-image: url("../images/zigzag.svg");
+      background-repeat: repeat-x;
+      content: ""; }
+  .content__title {
+    font-size: 43px;
+    line-height: 50px; } }
+
+@media (min-width: 1150px) {
+  .content-promo {
+    padding: 90px 0 85px; }
+  .content__title {
+    font-size: 53px;
+    line-height: 57px; } }
 
 @font-face {
   font-weight: normal;
