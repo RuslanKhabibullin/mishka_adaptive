@@ -71,6 +71,33 @@
           </li>
         </ul>
       </section>
+      <section class="manufacturing__wrapper">
+        <div class="manufacturing">
+          <h2 class="manufacturing__title">
+            <svg width="32" height="32">
+              <use xlink:href="/images/sprite-svg.svg#icon-video"></use>
+            </svg>
+            Процесс производства
+          </h2>
+          <div class="video__wrapper">
+            <a href="#" class="video__button">
+              <svg width="101" height="77">
+                <image xlink:href="/images/icon-play.svg"></image>
+              </svg>
+              Просмотреть видео
+            </a>
+            <picture>
+              <source media="(min-width: 1150px)" srcset="images/video-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="images/video-tablet.jpg">
+              <img class="video__preview" src="images/video-mobile.jpg" alt="Процесс производства">
+            </picture>
+          </div>
+          <p class="manufacturing__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
+          <button class="button" data-modal="order_modal">Сделать заказ</button>
+        </div>
+      </section>
     </main>
     <include src="./templates/footer.html"></include>
     <include src="./templates/modal.html"></include>

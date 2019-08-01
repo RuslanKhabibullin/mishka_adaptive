@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  padding: 30px 30px 58px;
+  padding: 30px 30px 0;
 }
 
 .catalog__list {
@@ -39,6 +39,8 @@
   &__dimensions {
     display: block;
     margin-bottom: 24px;
+
+    color: $light-black;
   }
 }
 
@@ -70,7 +72,7 @@
 @media (min-width: $tablet-width) {
   .catalog {
     width: 768px;
-    padding: 80px 50px 63px;
+    padding: 80px 50px 0;
   }
 
   .catalog__item {
@@ -112,7 +114,7 @@
 @media (min-width: $desktop-width) {
   .catalog {
     width: 1150px;
-    padding: 127px 50px 105px;
+    padding: 127px 50px 0;
   }
 
   .catalog__list {
