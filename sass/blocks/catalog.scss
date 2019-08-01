@@ -1,0 +1,144 @@
+.catalog {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 30px 58px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog__item {
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 0 30px;
+
+  border: 1px solid $light-grey;
+
+  &__description {
+    box-sizing: border-box;
+    padding: 30px 25px 28px;
+
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  &__title {
+    margin: 0 0 14px;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__dimensions {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0 0 0;
+
+  font-size: 15px;
+  line-height: 24px;
+
+  border-top: 1px solid $light-grey;
+
+  svg {
+    fill-opacity: .2;
+
+    cursor: pointer;
+  }
+
+  svg:hover {
+    fill-opacity: 1;
+
+    fill: $light-green;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    width: 768px;
+    padding: 80px 50px 63px;
+  }
+
+  .catalog__item {
+    display: flex;
+    width: 668px;
+    height: 335px;
+    margin: 0 0 55px;
+  
+    &__description {
+      position: relative;
+
+      padding: 30px 25px 27px;
+
+      font-size: 15px;
+    }
+  
+    &__title {
+      margin: 0 0 11px;
+
+      font-size: 20px;
+    }
+  
+    &__dimensions {
+      margin: 0
+    }
+  }
+
+  .price-block {
+    position: absolute;
+    bottom: 25px;
+    left: 32px;
+
+    width: 271px;
+
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 1150px;
+    padding: 127px 50px 105px;
+  }
+
+  .catalog__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    flex-direction: column;
+    width: 315px;
+    height: 660px;
+    margin: 0;
+  
+    &__description {
+      height: 194px;
+      padding: 20px 30px 27px;
+    }
+  
+    &__dimensions {
+      margin: 0 0 43px;
+    }
+  }
+
+  .price-block {
+    bottom: 20px;
+
+    width: 257px;
+  }
+}

@@ -16,6 +16,61 @@
       <section class="content-promo">
         <h1 class="content__title">Каталог товаров</h1>
       </section>
+      <section class="catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="images/photo-1-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="images/photo-1-tablet.jpg">
+              <img class="works-item__image" src="images/photo-1-mobile.jpg" alt="Зайчик-попрыгайчик">
+            </picture>
+            <div class="catalog__item__description">
+              <h2 class="catalog__item__title">Зайчик-попрыгайчик</h2>
+              <span class="catalog__item__dimensions">Рост 30 см, вес 200 г</span>
+              <div class="price-block">
+                <b>1 200 руб.</b>
+                <svg width="20.294" height="18.849">
+                  <use xlink:href="/images/sprite-svg.svg#icon-bin"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="images/photo-2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="images/photo-2-tablet.jpg">
+              <img class="works-item__image" src="images/photo-2-mobile.jpg" alt="Корзинка для белья">
+            </picture>
+            <div class="catalog__item__description">
+              <h2 class="catalog__item__title">Корзинка для белья</h2>
+              <span class="catalog__item__dimensions">Диаметр 15 см, высота 10 см</span>
+              <div class="price-block">
+                <b>690 руб.</b>
+                <svg width="20.294" height="18.849">
+                  <use xlink:href="/images/sprite-svg.svg#icon-bin"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="images/photo-3-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="images/photo-3-tablet.jpg">
+              <img class="works-item__image" src="images/photo-3-mobile.jpg" alt="Большая корзинка для игрушек">
+            </picture>
+            <div class="catalog__item__description">
+              <h2 class="catalog__item__title">Большая корзинка<br> для игрушек</h2>
+              <span class="catalog__item__dimensions">Диаметр 30 см, высота 30 см</span>
+              <div class="price-block">
+                <b>1 500 руб.</b>
+                <svg width="20.294" height="18.849">
+                  <use xlink:href="/images/sprite-svg.svg#icon-bin"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
     <include src="./templates/footer.html"></include>
     <include src="./templates/modal.html"></include>
