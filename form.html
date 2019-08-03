@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вязаные товары "Мишка"</title>
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/opensans-bold.woff2" as="font" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlSL6dVJVeWBCRxzRne3s5BQz7VM99DBw" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <include src="./templates/header.html"></include>
+    <main class="page-main">
+      <section class="content-promo">
+        <h1 class="content__title">Вязание на заказ</h1>
+      </section>
+      <section class="order">
+        <form class="order__form">
+          <p class="order__description">
+            Мы будем рады воплотить в жизнь ваши пожелания!
+            Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+          <div class="order__fieldset">
+            <span class="fieldset__title">Тип</span>
+            <label class="custom-radio">
+              <input name="order-type" type="radio" class="visually-hidden" value="interier" checked>
+              <span class="radio-indicator"></span>
+              Аксессуар для интерьера
+            </label>
+            <label class="custom-radio">
+              <input name="order-type" type="radio" class="visually-hidden" value="toy">
+              <span class="radio-indicator"></span>
+              Детская игрушка
+            </label>
+          </div>
+          <div class="order__fieldset">
+            <span class="fieldset__title">Цвет</span>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="white" checked>
+              <span class="checkbox-indicator"></span>
+              Белый
+            </label>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="grey" checked>
+              <span class="checkbox-indicator"></span>
+              Серый
+            </label>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="tiffany">
+              <span class="checkbox-indicator"></span>
+              "Тиффани"
+            </label>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="black">
+              <span class="checkbox-indicator"></span>
+              Черный
+            </label>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="pink">
+              <span class="checkbox-indicator"></span>
+              Розовый
+            </label>
+            <label class="custom-checkbox">
+              <input name="order-color" type="checkbox" class="visually-hidden" value="orange">
+              <span class="checkbox-indicator"></span>
+              Оранжевый
+            </label>
+          </div>
+          <div class="order__fieldset fieldset__fio">
+            <span class="fieldset__title">Фио</span>
+            <label>
+              Имя:
+              <input name="first-name" type="text" placeholder="Введите ваше имя*" required>
+            </label>
+            <label>
+              Фамилия:
+              <input name="last-name" type="text" placeholder="Укажите фамилию*" required>
+            </label>
+            <label>
+              Отчество:
+              <input name="middle-name" type="text" placeholder="Отчество, если желаете">
+            </label>
+          </div>
+          <div class="order__fieldset">
+            <span class="fieldset__title">Тел</span>
+            <input name="tel" type="text" placeholder="+7 XXX XX XX*" required class="tel-input">
+          </div>
+          <div class="order__fieldset">
+            <span class="fieldset__title">E-mail</span>
+            <input name="email" type="text" placeholder="Ваш Email*" required class="email-input">
+          </div>
+          <div class="order__fieldset">
+            <span class="fieldset__title">Доп</span>
+            <textarea rows="3" name="additional-info">Опишите все ваши пожелания к заказу</textarea>
+          </div>
+          <span class="order__remark">*Поля обязательны для заполнения</span>
+          <button type="submit" class="button">Отправить заказ</button>
+        </form>
+      </section>
+    </main>
+    <include src="./templates/footer.html"></include>
+  </body>
+</html>
