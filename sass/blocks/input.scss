@@ -1,0 +1,166 @@
+input,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+
+  color: $light-black;
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: transparent;
+
+  outline: none;
+
+  &::placeholder {
+    color: rgba($color: $light-black, $alpha: .3);
+  }
+}
+
+input {
+  padding: 10px 36px 14px 0;
+
+  border: none;
+  border-bottom: 2px solid $light-black;
+}
+
+textarea {
+  padding: 16px 17px;
+
+  border: 2px solid $light-black;
+}
+
+.custom-radio {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding-left: 63px;
+
+  color: $light-black;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.custom-radio .radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 1px solid $light-black;
+  border-radius: 50%;
+}
+
+.custom-radio input:checked + .radio-indicator::before {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $light-green;
+  border-radius: 50%;
+
+  content: "";
+}
+
+.custom-checkbox {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding-left: 64px;
+
+  color: $light-black;
+  font-weight: bold;
+}
+
+.custom-checkbox .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 2px solid $light-black;
+}
+
+.custom-checkbox input:checked + .checkbox-indicator::before {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+
+  width: 2px;
+  height: 8px;
+
+  background-color: #000;
+  transform: rotate(-45deg);
+
+  content: "";
+}
+
+.custom-checkbox input:checked + .checkbox-indicator::after {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+
+  width: 2px;
+  height: 20px;
+
+  background-color: #000;
+  transform: rotate(45deg);
+
+  content: "";
+}
+
+.label-descripion {
+  display: block;
+  margin: 23px 0;
+
+  color: $light-black;
+  font-weight: bold;
+}
+
+.tel-input {
+  background-image: url('../images/icon-phone.svg');
+  background-repeat: no-repeat;
+  background-position: 224px 0;
+}
+
+.email-input {
+  background-image: url('../images/icon-mail.svg');
+  background-repeat: no-repeat;
+  background-position: 224px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .custom-radio,
+  .custom-checkbox {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .tel-input,
+  .email-input {
+    background-position: 447px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tel-input,
+  .email-input {
+    background-position: 666px 0;
+  }
+}

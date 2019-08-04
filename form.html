@@ -22,81 +22,107 @@
             Мы будем рады воплотить в жизнь ваши пожелания!
             Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
-          <div class="order__fieldset">
-            <span class="fieldset__title">Тип</span>
-            <label class="custom-radio">
-              <input name="order-type" type="radio" class="visually-hidden" value="interier" checked>
-              <span class="radio-indicator"></span>
-              Аксессуар для интерьера
-            </label>
-            <label class="custom-radio">
-              <input name="order-type" type="radio" class="visually-hidden" value="toy">
-              <span class="radio-indicator"></span>
-              Детская игрушка
-            </label>
+          <div class="fieldset__wrapper">
+            <div class="order__fieldset">
+              <div class="fieldset__title">
+                <span>Тип</span>
+              </div>
+              <label class="custom-radio">
+                <input name="order-type" type="radio" class="visually-hidden" value="interier" checked>
+                <span class="radio-indicator"></span>
+                Аксессуар для интерьера
+              </label>
+              <label class="custom-radio">
+                <input name="order-type" type="radio" class="visually-hidden" value="toy">
+                <span class="radio-indicator"></span>
+                Детская игрушка
+              </label>
+            </div>
           </div>
-          <div class="order__fieldset">
-            <span class="fieldset__title">Цвет</span>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="white" checked>
-              <span class="checkbox-indicator"></span>
-              Белый
-            </label>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="grey" checked>
-              <span class="checkbox-indicator"></span>
-              Серый
-            </label>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="tiffany">
-              <span class="checkbox-indicator"></span>
-              "Тиффани"
-            </label>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="black">
-              <span class="checkbox-indicator"></span>
-              Черный
-            </label>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="pink">
-              <span class="checkbox-indicator"></span>
-              Розовый
-            </label>
-            <label class="custom-checkbox">
-              <input name="order-color" type="checkbox" class="visually-hidden" value="orange">
-              <span class="checkbox-indicator"></span>
-              Оранжевый
-            </label>
+          <div class="fieldset__wrapper fieldset__wrapper--grey">
+            <div class="order__fieldset order__fieldset--color">
+              <div class="fieldset__title">
+                <span>Цвет</span>
+              </div>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="white" checked>
+                <span class="checkbox-indicator"></span>
+                Белый
+              </label>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="grey" checked>
+                <span class="checkbox-indicator"></span>
+                Серый
+              </label>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="tiffany">
+                <span class="checkbox-indicator"></span>
+                "Тиффани"
+              </label>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="black">
+                <span class="checkbox-indicator"></span>
+                Черный
+              </label>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="pink">
+                <span class="checkbox-indicator"></span>
+                Розовый
+              </label>
+              <label class="custom-checkbox">
+                <input name="order-color" type="checkbox" class="visually-hidden" value="orange">
+                <span class="checkbox-indicator"></span>
+                Оранжевый
+              </label>
+            </div>
           </div>
-          <div class="order__fieldset fieldset__fio">
-            <span class="fieldset__title">Фио</span>
-            <label>
-              Имя:
-              <input name="first-name" type="text" placeholder="Введите ваше имя*" required>
-            </label>
-            <label>
-              Фамилия:
-              <input name="last-name" type="text" placeholder="Укажите фамилию*" required>
-            </label>
-            <label>
-              Отчество:
-              <input name="middle-name" type="text" placeholder="Отчество, если желаете">
-            </label>
+          <div class="fieldset__wrapper">
+            <div class="order__fieldset order__fieldset--fio">
+              <div class="fieldset__title">
+                <span>Фио</span>
+              </div>
+              <label>
+                <span class="label-descripion">Имя:</span>
+                <input name="first-name" type="text" placeholder="Введите ваше имя*" required>
+              </label>
+              <label>
+                <span class="label-descripion">Фамилия:</span>
+                <input name="last-name" type="text" placeholder="Укажите фамилию*" required>
+              </label>
+              <label>
+                <span class="label-descripion">Отчество:</span>
+                <input name="middle-name" type="text" placeholder="Отчество, если желаете">
+              </label>
+            </div>
           </div>
-          <div class="order__fieldset">
-            <span class="fieldset__title">Тел</span>
-            <input name="tel" type="text" placeholder="+7 XXX XX XX*" required class="tel-input">
+          <div class="fieldset__wrapper fieldset__wrapper--grey">
+            <div class="order__fieldset order__fieldset--tel">
+              <div class="fieldset__title">
+                <span>Тел</span>
+              </div>
+              <input name="tel" type="text" placeholder="+7 XXX XX XX*" required class="tel-input">
+            </div>
           </div>
-          <div class="order__fieldset">
-            <span class="fieldset__title">E-mail</span>
-            <input name="email" type="text" placeholder="Ваш Email*" required class="email-input">
+          <div class="fieldset__wrapper fieldset__wrapper--grey">
+            <div class="order__fieldset">
+              <div class="fieldset__title">
+                <span>E-mail</span>
+              </div>
+              <input name="email" type="text" placeholder="Ваш Email*" required class="email-input">
+            </div>
           </div>
-          <div class="order__fieldset">
-            <span class="fieldset__title">Доп</span>
-            <textarea rows="3" name="additional-info">Опишите все ваши пожелания к заказу</textarea>
+          <div class="fieldset__wrapper">
+            <div class="order__fieldset">
+              <div class="fieldset__title">
+                <span>Доп</span>
+              </div>
+              <textarea rows="8" name="additional-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </div>
-          <span class="order__remark">*Поля обязательны для заполнения</span>
-          <button type="submit" class="button">Отправить заказ</button>
+          <div class="fieldset__wrapper fieldset__wrapper--buttons">
+            <span class="order__remark">*Поля обязательны для заполнения</span>
+            <button type="submit" class="button order__button">Отправить заказ</button>
+          </div>
         </form>
       </section>
     </main>
