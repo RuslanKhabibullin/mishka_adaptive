@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Adaptive site from Academy templates",
   "main": "index.html",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve",
